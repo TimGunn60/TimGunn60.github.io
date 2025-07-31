@@ -1,0 +1,444 @@
+:root {
+    --primary-500: hsl(259, 13%, 28%);
+    --primary-600: hsl(252, 9%, 22%);
+    --primary-700: hsl(243, 26%, 15%);
+
+    --surface-3: var(--primary-700);
+
+    --border-1: var(--primary-500);
+    --border-2: var(--primary-600);
+}
+
+#Name {
+    font-size: 1.5rem;
+}
+
+#TopBar {
+    background-color: rgb(197, 28, 28);
+    
+}
+
+body {
+    background-color: rgb(34,34,34);
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgb(66, 62, 62);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2) ; 
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.nav-tabs {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex: 1;
+    justify-content: center; 
+    width: 100%;
+}
+
+.nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; 
+    background-color: rgba(0, 0, 0, 0.9); 
+    backdrop-filter: blur(10px); 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); 
+}
+
+.weather-info {
+    padding-left: 20px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+
+#weather-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none; 
+    color: inherit; 
+    padding: 12px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+#weather-container:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    transform: translateY(-1px);
+    cursor: pointer;
+}
+
+
+#weather-location {
+    font-weight: 500;
+    margin-right: 10px; 
+    color: white;
+}
+
+#weather-temp {
+    font-weight: 500;
+    margin-right: 10px;
+    color: white;
+}
+
+#weather-icon {
+    font-size: 18px;
+    color: white;
+}
+
+#weather-icon.sunny {
+    color: #FFA500; /* Orange for sunny */
+}
+
+#weather-icon.partly-cloudy {
+    color: rgb(211,211,211); /* Light blue for clouds */
+}
+
+#weather-icon.rainy {
+    color: #4A90E2; /* Blue for rainy */
+}
+
+#weather-icon.default {
+    color: white; /* White for everything else */
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    padding-right: 20px;
+}
+
+.social-link {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-link:hover {
+    color: white;
+    transform: scale(1.2);
+}
+
+.tab-link {
+    display: inline-flex;
+    padding: 15px 25px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.5px; 
+    border-bottom: 3px solid transparent;
+    height: 24px; 
+    align-items: center; 
+    justify-content: center;
+    flex-shrink: 0; 
+    min-width: max-content; 
+}
+
+.tab-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: thin; 
+    -webkit-overflow-scrolling: touch; 
+}
+
+.tab-container::-webkit-scrollbar {
+    height: 4px;
+}
+
+.tab-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.tab-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+}
+
+
+.tab-content {
+    padding: 100px 20px 40px 20px;
+    max-width: none;
+    margin: 0 auto;
+}
+
+.tab-panel {
+    display: none; /* This hides all panels by default */
+    color: white;
+    width: 100%; 
+    max-width: none;
+    margin: 0 auto; 
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.tab-panel.active {
+    display: block; /* This shows only the active panel */
+    padding: 10px;
+    justify-content: center;
+}
+
+.tab-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    font-size: 18px;
+}
+
+
+.tab-link.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: bold;
+}
+
+.home-tab.active {
+    font-weight: bold;
+    border-bottom: 3px solid rgb(0,204,255); /* Blue for Home */
+}
+
+.projects-tab.active {
+    font-weight: bold;
+    border-bottom: 3px solid rgb(255, 234, 0); /* Yellow for Projects */
+}
+
+.about-tab.active {
+    font-weight: bold;
+    border-bottom: 3px solid rgb(42,255,0); /* Green for About */
+}
+
+
+.matrix-container {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 80vh; 
+}
+
+.cipher {
+    color: rgb(0, 204, 255);
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 20px rgba(0, 204, 255, 0.5);
+    display: block; 
+    width: 100%; 
+    font-feature-settings: "tnum";
+    white-space: nowrap; 
+}
+
+.cipher:hover {
+    text-shadow: 0 0 30px rgba(0, 204, 255, 0.8);
+}
+
+.cipher.active {
+    pointer-events: none; /* Prevents multiple triggers while scrambling */
+}
+
+.cta-message {
+    color: rgba(0, 204, 255); 
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem; 
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 0.1em;
+    margin-top: 20px; /* Space it out from the cipher text */
+    opacity: 0; /* Start invisible */
+    transform: translateY(50px) rotateX(-90deg); /* Start below and rotated */
+    transform-origin: center bottom; /* Pivot point for rotation */
+    animation: none; /* No animation by default */
+    transition: opacity 0.5s ease-out, transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Smooth transition for manual control */
+    text-shadow: 0 0 20px rgba(0, 204, 255, 0.5);
+}
+
+@keyframes swingUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px) rotateX(-90deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) rotateX(0deg);
+    }
+}
+
+/* Class to trigger the animation */
+.cta-message.show {
+    animation: swingUp 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes swingDownFadeOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0) rotateX(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(50px) rotateX(-90deg);
+    }
+}
+
+.cta-message.hide {
+    animation: swingDownFadeOut 0.5s ease-in forwards;
+}
+
+.cta-message:hover {
+    text-shadow: 0 0 30px rgba(0, 204, 255, 0.8);
+}
+
+.box div {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border: 6px solid rgb(0,204,255); 
+    background-color: transparent;
+}
+
+
+.box div:nth-child(1) {
+    top: 20%;
+    left: 42%;
+    animation: animate 10s linear infinite;
+}
+
+.box div:nth-child(2) {
+    top: 85%;
+    left: 50%;
+    animation: animate 7s linear infinite;
+}
+
+.box div:nth-child(3) {
+    top: 17%;
+    left: 6%;
+    animation: animate 9s linear infinite;
+}
+
+.box div:nth-child(4) {
+    top: 30%;
+    left: 75%;
+    animation: animate 12s linear infinite;
+}
+
+.box div:nth-child(5) {
+    top: 80%;
+    left: 10%;
+    animation: animate 6s linear infinite;
+}
+
+.box div:nth-child(6) {
+    top: 80%;
+    left: 70%;
+    animation: animate 8s linear infinite;
+}
+
+.box div:nth-child(7) {
+    top: 70%;
+    left: 90%;
+    animation: animate 15s linear infinite;
+}
+
+.box div:nth-child(8) {
+    top: 32%;
+    left: 25%;
+    animation: animate 16s linear infinite;
+}
+
+@keyframes animate {
+    0%{
+        transform: scale(0) translateY(0) rotate(0);
+        opacity: 0;
+    }
+    50% {  
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1.3) translateY(-90px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.Projects-Intro-Card {
+    font-family: Poppins;
+    border-radius: 1rem;
+    text-align: center;
+    padding: 40px 20px;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: none;
+    background-color: transparent;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;  
+
+}
+
+
+.Projects-Intro-Card::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    border-radius: inherit;
+    border: 3px solid transparent;
+    background: linear-gradient(
+        to top,                          
+        rgba(255, 190, 0, 1),         
+        rgba(255, 234, 0, 1)          
+    );
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+
+}
+
+.About-Intro-Card {
+    font-family: Poppins;
+    border-radius: 1rem;
+    text-align: center;
+    padding: 40px 20px;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: none;
+    background-color: transparent;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;  
+}
+
+.About-Intro-Card::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    border-radius: inherit;
+    border: 3px solid transparent;
+    background: linear-gradient(
+        to top,                          
+        rgba(30, 200, 0, 1),         
+        rgba(42, 255, 0, 1)          
+    );
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+

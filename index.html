@@ -1,14 +1,80 @@
 <!DOCTYPE html>
 <html>
-<body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timothy Gunn Personal Website</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-icons.min.css">
+    <script src="index.js"></script>
+</head>
+</head>
 
-<h1 style="text-align: center;">Timothy Gunn</h1>
-<div style="text-align: center; margin-top: 20px;">
-  <img src="tgunn2@nd.edu-1.jpg" alt="A picture of me" style="max-width: 300px; border-radius: 10px;">
-  <p style="font-style: italic;">Student at the University of Notre Dame</p>
+<body>
+<nav class="navbar">
+  <div class="weather-info">
+          <a href="https://weather.com/weather/today/l/Saint+Louis+MO+USMO0787:1:US" target="_blank" id="weather-container">
+            <span id="weather-location">St. Louis</span>
+            <span id="weather-temp">Loading...</span>
+            <i id="weather-icon" class="wi wi-day-sunny"></i>
+          </a>
+  </div>
+
+  <ul class="nav-tabs">
+    <li><a href="#home" class="tab-link home-tab active" data-tab="home">Home</a></li>
+    <li><a href="#projects" class="tab-link projects-tab" data-tab="projects">Projects</a></li>
+    <li><a href="#about" class="tab-link about-tab" data-tab="about">About</a></li>
+  </ul>
+
+  <div class="social-icons">
+        <a href="https://github.com/TimGunn60" class="social-link" target="_blank">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/timothy-gunn60" class="social-link" target="_blank">
+            <i class="fab fa-linkedin"></i>
+        </a>
+    </div>
+</nav>
+
+<div class="tab-content">
+    <div id="home" class="tab-panel active">
+      <div class="matrix-container">
+         <a href="#" class="cipher" id="scrambleText">WELCOME TO MY WEBSITE</a>
+         <p class="cta-message" id="ctaMessage">Click another tab to learn more</p>
+      </div>
+       <div class="box">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
+    </div>
+
+    <div id="projects" class="tab-panel">
+      <div class="Projects-Intro-Card" 
+          data-tilt data-tilt-max="10" 
+          data-tilt-speed="100" 
+          data-tilt-perspective="2000">
+        <h1>Here are some of my projects</h1>
+      </div>
+    </div>
+
+    <div id="about" class="tab-panel">
+      <div class="About-Intro-Card"
+          data-tilt data-tilt-max="10" 
+          data-tilt-speed="100" 
+          data-tilt-perspective="2000">
+        <h1>About Me</h1>
+        </div>
+    </div>
 </div>
-<div style="position: fixed; bottom: 10px; right: 10px; color: lightgray; font-size: 14px;">
-  I'm hosted with GitHub Pages
-</div>
+<script type="text/javascript" src="vanilla-tilt.js"></script>
 </body>
 </html>
