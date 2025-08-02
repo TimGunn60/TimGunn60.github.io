@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timothy Gunn Personal Website</title>
+    <link rel="icon" type="image/png" href="node.png">
     <meta name="google-site-verification" content="ytrKlV-uxbEdP0K-JOrrriu45IBzkA7w0gMBhHtxxII" />
     <link rel="stylesheet" href="index.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-icons.min.css">
     <script src="index.js"></script>
-</head>
 </head>
 
 <body>
@@ -59,21 +59,92 @@
     </div>
 
     <div id="projects" class="tab-panel">
-      <div class="Projects-Intro-Card" 
-          data-tilt data-tilt-max="10" 
-          data-tilt-speed="100" 
-          data-tilt-perspective="2000">
-        <h1>Here are some of my projects</h1>
+      <div class="Projects-List">
+        <div class="Project-Card"
+             data-tilt data-tilt-max="10" 
+             data-tilt-speed="100" 
+             data-tilt-perspective="2000"
+             data-tilt-glare data-tilt-max-glare="0.8">
+          <div class="content-parallax">
+            <div class="project-image">
+              <img src="3-tips-sentiment-analysis.jpg">
+            </div>
+            <div class="project-details">
+              <h3>Project 1: Movie Sentiment Analyzer</h3>
+              <p>
+                Built an end-to-end text classification pipeline to predict sentiment in movie reviews using Scikit-learn and PyTorch. 
+                Explored feature engineering techniques such as TF-IDF and implemented neural networks for improved accuracy. 
+                Gained experience in natural language processing, model evaluation, and handling unstructured text data in Python.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="Project-Card alternate-card"
+             data-tilt data-tilt-max="10" 
+             data-tilt-speed="100" 
+             data-tilt-perspective="2000"
+             data-tilt-glare data-tilt-max-glare="0.8">
+          <div class="content-parallax">
+            <div class="project-image">
+              <img src="Weather-Icons.png">
+            </div>
+            <div class="project-details">
+               <h3>Project 2: Weather Predictor</h3>
+               <p> Built a multilayer perceptron (MLP) from scratch using NumPy, Pandas, and SciPy 
+                   to predict weather conditions from time-series data. Implemented forward and backward propagation manually,
+                   exploring GeLU activations, L2 regularization, and residual connections to improve generalization. 
+                   Strengthened understanding of neural network fundamentals, numerical optimization, and time-series data handling in Python.
+               </p>
+            </div>
+
+          </div>
+        </div> 
+
+        <div class="Project-Card"
+              data-tilt data-tilt-max="10" 
+              data-tilt-speed="100" 
+              data-tilt-perspective="2000"
+              data-tilt-glare data-tilt-max-glare="0.8">
+          <div class="content-parallax">
+            <div class="project-image">
+              <img src="HMM-Picture.jpg">
+            </div>
+            <div class="project-details">
+              <h3>Project 3: Hidden Markov Model</h3>
+              <p>
+                Developed a two-state Hidden Markov Model (HMM) from scratch to model time-series data with latent structure. 
+                Implemented the forward-backward algorithm for inference and the Baum-Welch algorithm for unsupervised learning of transition 
+                and emission probabilities. Gained hands-on experience with probabilistic modeling, expectation-maximization, and sequence data analysis. 
+                Strengthened understanding of hidden state dynamics and unsupervised learning techniques in Python.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
     <div id="about" class="tab-panel">
-      <div class="About-Intro-Card"
+      <div class="About-Card"
           data-tilt data-tilt-max="10" 
           data-tilt-speed="100" 
-          data-tilt-perspective="2000">
-        <h1>About Me</h1>
+          data-tilt-perspective="2000"
+          data-tilt-glare data-tilt-max-glare="0.8">
+        <div class="content-parallax">
+          <div class="personal-image">
+            <img src="tgunn2@nd.edu-1.jpg">
+          </div>
+          <div class="bio">
+            <h3>About me</h3>
+            <p>My name is Tim Gunn and I am a senior at the University of Notre Dame studying Computer Science. 
+               I'm driven by a deep curiosity and a passion for continuous learning, especially in areas like data science and machine learning.
+               I enjoy breaking down complex problems, uncovering patterns in data, and using analytical thinking to build solutions that make a real-world impact.
+               Outside of tech, I enjoy working out, playing basketball with friends, and watching Cardinals baseball. </p>
+            <h3>Contact</h3>
+            <p>If you have any questions or would like to colloborate feel free to contact me at: tgunn2@nd.edu</p>
+          </div>
         </div>
+      </div>
     </div>
 </div>
 <script type="text/javascript" src="vanilla-tilt.js"></script>

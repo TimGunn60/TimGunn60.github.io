@@ -183,7 +183,7 @@ body {
 }
 
 .tab-panel {
-    display: none; /* This hides all panels by default */
+    display: none; /*Hides all panels by default*/
     color: white;
     width: 100%; 
     max-width: none;
@@ -193,7 +193,7 @@ body {
 }
 
 .tab-panel.active {
-    display: block; /* This shows only the active panel */
+    display: block; /*This shows only the active panel*/
     padding: 10px;
     justify-content: center;
 }
@@ -211,17 +211,17 @@ body {
 
 .home-tab.active {
     font-weight: bold;
-    border-bottom: 3px solid rgb(0,204,255); /* Blue for Home */
+    border-bottom: 3px solid rgb(0,204,255); /*Blue for Home*/
 }
 
 .projects-tab.active {
     font-weight: bold;
-    border-bottom: 3px solid rgb(255, 234, 0); /* Yellow for Projects */
+    border-bottom: 3px solid rgb(255, 234, 0); /*Yellow for Projects*/
 }
 
 .about-tab.active {
     font-weight: bold;
-    border-bottom: 3px solid rgb(42,255,0); /* Green for About */
+    border-bottom: 3px solid rgb(42,255,0); /*Green for About*/
 }
 
 
@@ -255,7 +255,7 @@ body {
 }
 
 .cipher.active {
-    pointer-events: none; /* Prevents multiple triggers while scrambling */
+    pointer-events: none; /*Prevents multiple triggers while scrambling*/
 }
 
 .cta-message {
@@ -265,12 +265,12 @@ body {
     font-weight: 400;
     text-align: center;
     letter-spacing: 0.1em;
-    margin-top: 20px; /* Space it out from the cipher text */
-    opacity: 0; /* Start invisible */
-    transform: translateY(50px) rotateX(-90deg); /* Start below and rotated */
-    transform-origin: center bottom; /* Pivot point for rotation */
-    animation: none; /* No animation by default */
-    transition: opacity 0.5s ease-out, transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Smooth transition for manual control */
+    margin-top: 20px; 
+    opacity: 0;
+    transform: translateY(50px) rotateX(-90deg); 
+    transform-origin: center bottom; 
+    animation: none; 
+    transition: opacity 0.5s ease-out, transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
     text-shadow: 0 0 20px rgba(0, 204, 255, 0.5);
 }
 
@@ -285,7 +285,6 @@ body {
     }
 }
 
-/* Class to trigger the animation */
 .cta-message.show {
     animation: swingUp 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
@@ -380,22 +379,30 @@ body {
     }
 }
 
-.Projects-Intro-Card {
+
+.Projects-List {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; 
+}
+
+.Project-Card {
+    box-sizing: border-box;
     font-family: Poppins;
     border-radius: 1rem;
     text-align: center;
-    padding: 40px 20px;
+    padding: 80px 80px; 
     position: relative;
     border: 1px solid rgba(255, 255, 255, 0.2);
     background: none;
     background-color: transparent;
     -webkit-backdrop-filter: none;
-    backdrop-filter: none;  
-
+    backdrop-filter: none;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
 }
 
-
-.Projects-Intro-Card::before {
+.Project-Card::before {
     content: "";
     position: absolute;
     z-index: -1;
@@ -403,29 +410,76 @@ body {
     border-radius: inherit;
     border: 3px solid transparent;
     background: linear-gradient(
-        to top,                          
-        rgba(255, 190, 0, 1),         
-        rgba(255, 234, 0, 1)          
+        to top,
+        rgba(255, 190, 0, 1),
+        rgba(255, 234, 0, 1)
     );
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-
 }
 
-.About-Intro-Card {
+
+.content-parallax {
+    transform: translateZ(100px);
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.project-image {
+    width: 40%;
+}
+
+.project-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 1rem;
+}
+
+.project-details {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-details h3 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.project-details p {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.alternate-card .content-parallax {
+    flex-direction: row-reverse;
+}
+
+
+
+.About-Card {
     font-family: Poppins;
     border-radius: 1rem;
     text-align: center;
-    padding: 40px 20px;
+    padding: 60px 60px;
     position: relative;
     border: 1px solid rgba(255, 255, 255, 0.2);
     background: none;
     background-color: transparent;
     -webkit-backdrop-filter: none;
     backdrop-filter: none;  
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
 }
 
-.About-Intro-Card::before {
+
+.About-Card::before {
     content: "";
     position: absolute;
     z-index: -1;
@@ -441,4 +495,35 @@ body {
     backdrop-filter: blur(10px);
 }
 
+.personal-image {
+    width: 400px;
+}
+
+.personal-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 1rem;
+}
+
+.bio {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bio h3 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.bio p {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 10;
+}
 
