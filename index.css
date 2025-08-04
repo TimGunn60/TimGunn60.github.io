@@ -527,3 +527,178 @@ body {
     font-weight: 10;
 }
 
+/*Optimization for mobile*/
+@media (max-width: 768px) {
+
+    .navbar {
+        justify-content: space-between; 
+        align-items: center;
+        padding: 0 10px;
+    }
+
+    .nav-container {
+        padding: 0 50px; 
+    }
+
+    .nav-tabs {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 70%;
+        height: 100%;
+        background-color: rgb(66, 62, 62);
+        padding: 0 !important; 
+        margin: 0 !important;   
+        list-style: none;
+        transition: left 0.3s ease-in-out;
+    }
+
+    .nav-tabs li {
+        padding: 0 !important; 
+        margin: 0 !important;   
+    }
+
+    .nav-tabs.open {
+        left: 0;
+    }
+
+    .menu-icon {
+        display: block !important; 
+        cursor: pointer;
+        z-index: 1001; 
+        position: relative; 
+        width: 25px; 
+        height: 25px; 
+
+    }
+
+    .menu-icon .bar,
+    .menu-icon .bar::before,
+    .menu-icon .bar::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: white;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .menu-icon .bar {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .menu-icon .bar::before {
+        top: -8px;
+    }
+
+    .menu-icon .bar::after {
+        top: 8px;
+    }
+
+    
+    .tab-link {
+        display: block;
+        padding: 15px 25px; 
+        color: white;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        letter-spacing: 0.5px;
+        border-bottom: 3px solid transparent;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        min-width: max-content;
+        text-align: center;
+    }
+
+
+    .social-icons {
+        display: flex; 
+        gap: 15px;
+    }
+
+   
+    .cipher {
+        font-size: 2rem; 
+        letter-spacing: 0.05em; 
+        white-space: normal;
+    }
+
+    .cta-message {
+        font-size: 1.2rem; 
+        letter-spacing: 0.05em; 
+    }
+
+    /*Restack Project cards*/
+    .Project-Card {
+        padding: 30px 20px; 
+        transform: none; 
+        transform-style: none; 
+    }
+
+    .content-parallax {
+        flex-direction: column; 
+        justify-content: center; 
+        gap: 20px; 
+    }
+
+    .project-image {
+        width: 100%; 
+    }
+
+    .project-details {
+        width: 100%; 
+    }
+
+    .project-details h3 {
+        font-size: 1.5rem;
+    }
+    
+    .project-details p {
+        font-size: 1rem; 
+    }
+
+    .alternate-card .content-parallax {
+        flex-direction: column; 
+    }
+
+    /*Adjust About card*/
+    .About-Card {
+        padding: 50px 20px; 
+        transform: none; 
+        transform-style: none; 
+    }
+
+    .personal-image {
+        width: 100%;
+        max-width: 300px; 
+        margin: 0 auto; 
+    }
+
+    .bio {
+        width: 100%; 
+    }
+
+    .bio h3 {
+        font-size: 1.5rem; 
+    }
+
+    .bio p {
+        font-size: 1rem; 
+    }
+}
+
+
+/*Make sure the hamburger icon does not appear on desktop*/
+.menu-icon {
+    display: none;
+}
+
+
+
