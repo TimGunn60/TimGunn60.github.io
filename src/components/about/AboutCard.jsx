@@ -37,7 +37,8 @@ function AboutCard() {
         <div className="bio">
           <h3>About me</h3>
           <p>
-            My name is Tim Gunn, and I am a recent computer science graduate from the University of Notre Dame interested in low latency systems and machine learning. 
+            My name is Tim Gunn, and I am a recent computer science graduate from the University of Notre Dame. My interests include low latency systems and machine learning, specifically reinforcement learning, 
+            and I've explored both through personal projects as well as through research at Notre Dame. 
             When I’m not coding, you’ll usually find me in the gym, playing basketball with friends, or watching Cardinals baseball.
           </p>
           <h3>Contact</h3>
